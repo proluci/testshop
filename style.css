@@ -1,0 +1,60 @@
+:root {
+  --bg: #f3f5f8;
+  --surface: #ffffff;
+  --ink: #18212e;
+  --muted: #5b6676;
+  --line: #d9dfe7;
+  --denim: #2c4a78;
+  --denim-soft: #e3eaf5;
+  --ok: #24714a; --ok-bg: #e0f0e6;
+  --warn: #8d5c00; --warn-bg: #f8ecd2;
+  --code-bg: #101722; --code-ink: #d6e2f0;
+  --f-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f141b; --surface: #171e28; --ink: #e5ebf2; --muted: #9aa6b5; --line: #2a3442;
+    --denim: #8db1e6; --denim-soft: #1c2a3d;
+    --ok: #74cf9b; --ok-bg: #1b3125; --warn: #e2b45e; --warn-bg: #362b16;
+    --code-bg: #0a0f16; --code-ink: #cfdbe9;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.5; }
+a { color: var(--denim); }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 40px; display: grid; gap: 20px; }
+header.kopf { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.logo { font-family: var(--f-display); font-weight: 800; font-size: 1.4rem; letter-spacing: -0.01em; text-decoration: none; color: var(--ink); }
+.logo span { color: var(--denim); }
+.korb { text-decoration: none; background: var(--denim); color: #fff; padding: 8px 14px; border-radius: 999px; font-weight: 600; }
+@media (prefers-color-scheme: dark) { .korb { color: #0f141b; } }
+.hinweis { background: var(--warn-bg); color: var(--warn); border-radius: 8px; padding: 8px 12px; font-size: 0.9rem; }
+h1 { font-family: var(--f-display); font-size: 1.6rem; margin: 0; }
+h2 { font-family: var(--f-display); font-size: 1.15rem; margin: 0; }
+#produkte { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.produkt { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: grid; gap: 8px; }
+.produkt h3 { margin: 0; font-size: 1.05rem; }
+.bild { height: 120px; border-radius: 8px; background: var(--denim-soft); color: var(--denim); display: grid; place-items: center; font-family: var(--f-display); font-size: 3rem; font-weight: 800; }
+.preis { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; }
+button { font: inherit; font-weight: 600; background: var(--denim); color: #fff; border: 0; border-radius: 8px; padding: 10px 14px; cursor: pointer; }
+@media (prefers-color-scheme: dark) { button { color: #0f141b; } }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--denim); outline-offset: 2px; }
+.karte { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 12px; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+td:last-child, th:last-child { text-align: right; }
+tfoot td { font-weight: 700; border-bottom: 0; }
+.monitor { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: grid; gap: 10px; }
+.monitor p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+.status { font-weight: 600; font-size: 0.9rem; padding: 6px 10px; border-radius: 6px; }
+.status.ok { background: var(--ok-bg); color: var(--ok); }
+.status.fehlt { background: var(--warn-bg); color: var(--warn); }
+#monitor-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+#monitor-liste li { display: grid; gap: 4px; min-width: 0; }
+#monitor-liste .ev { font-family: var(--f-mono); font-weight: 700; color: var(--denim); }
+#monitor-liste li.intern .ev { color: var(--muted); font-weight: 400; }
+#monitor-liste pre { margin: 0; background: var(--code-bg); color: var(--code-ink); padding: 10px; border-radius: 8px; font-size: 0.8rem; overflow-x: auto; max-height: 260px; }
+details summary { cursor: pointer; font-weight: 600; }

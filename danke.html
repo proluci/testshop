@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Danke · Ruhr Denim Testshop</title>
+<script src="gtm.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@800&family=JetBrains+Mono:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="shop.js" defer></script>
+</head>
+<body data-seite="danke">
+<div class="wrap">
+  <header class="kopf">
+    <a class="logo" href="index.html">Ruhr <span>Denim</span></a>
+    <a class="korb" href="kasse.html">Warenkorb (<span id="zaehler">0</span>)</a>
+  </header>
+  <div class="hinweis">Testshop zum Üben von Webanalyse. Hier wird nichts verkauft und nichts bezahlt.</div>
+
+  <section class="karte">
+    <h1>Danke für deine Bestellung!</h1>
+    <div id="bestellung"></div>
+    <p><a href="index.html">Weiter einkaufen</a></p>
+  </section>
+
+  <section class="monitor" aria-labelledby="mon">
+    <h2 id="mon">Data-Layer-Monitor</h2>
+    <p>Hier siehst du live jeden „Übergabezettel“, den der Shop in den dataLayer legt. Genau diese Meldungen liest der Google Tag Manager. Die neueste steht oben.</p>
+    <div id="gtm-status" class="status"></div>
+    <ul id="monitor-liste"></ul>
+  </section>
+</div>
+</body>
+</html>
