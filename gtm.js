@@ -2,7 +2,7 @@
 //  HIER DEINE GOOGLE-TAG-MANAGER-ID EINTRAGEN (nur diese Zeile)
 //  Beispiel: const GTM_ID = "GTM-AB12CD3";
 // ============================================================
-const GTM_ID = "GTM-XXXXXXX";
+   const GTM_ID = "GTM-KBNWN92P";
 
 
 // Ab hier nichts ändern.
